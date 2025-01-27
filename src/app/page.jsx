@@ -41,6 +41,7 @@ export default function Home() {
         <div className="heroSubtitle">
           <p>Join the largest gathering of young tech enthusiasts and experience the thrill of competition, learning, as well as innovation, The place where ideas come alive and futures are shaped.</p>
         </div>
+        <button className="heroBtn">Register now</button>
 
         <div className="heroScroller">
           <FaArrowDown />

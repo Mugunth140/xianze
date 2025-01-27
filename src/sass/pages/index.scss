@@ -1,6 +1,5 @@
 .heroBg{
     z-index: -99;
-    
 }
 
 .heroContainer {
@@ -27,6 +26,10 @@
         line-height: 1.2;
         color: var(--base);
         width: clamp(20rem, 100%, 40rem);
+    }
+
+    .heroBtn {
+        display: flex;
     }
 
     .heroScroller {
@@ -69,6 +72,20 @@
         width: 100%;
         padding: 0 2rem;
 
+    }
+
+    .heroBtn {
+        display: block;
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        background-color: var(--accent);
+        color: var(--secondary);
+        outline: none;
+        border: none;
+        margin-top: 1rem;
     }
    }
 }
