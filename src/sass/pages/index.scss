@@ -3,9 +3,8 @@
     
 }
 
-
 .heroContainer {
-    position: relative;
+    //position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +31,7 @@
 
     .heroScroller {
         position: absolute;
-        bottom: 20;
+        bottom: 2rem;
         opacity: 0.8;
         text-align: center;
         display: flex;
