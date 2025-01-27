@@ -1,0 +1,192 @@
+nav {
+  width: 100%;
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  color: var(--primary);
+  text-transform: capitalize;
+  font-size: large;
+  z-index: 9;
+
+  .nav-logo {
+     & > a {
+      transition: color 0.2s linear;
+     }
+
+    & > a:hover {
+      transition: color 0.2s linear;
+      color: var(--accent);
+    }
+  }
+
+  .nav-container {
+    width: 80%;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-routes {
+    display: flex;
+    gap: 4rem;
+    display: flex;
+    align-items: center;
+
+    & > a {
+      transition: color 0.2s linear;
+     }
+
+    & > a:hover {
+      transition: color 0.2s linear;
+      color: var(--accent);
+    }
+  }
+
+
+  .nav-btn-container {
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    scale: 1;
+
+    &:hover .nav-btn{
+      transition: all 0.3s ease-in;
+      background-color: var(--secondary);
+      color: var(--accent);
+    }
+
+    .nav-btn {
+      cursor: pointer;
+      border: 1.5px solid var(--accent);
+      border-radius: 0.7rem;
+      padding: 0.7rem 2rem;
+      font-size: medium;
+      color: var(--secondary);
+      text-transform: inherit;
+      background-color: var(--accent);
+      transition: all 0.6s ease-in-out;
+
+      #shimmer {
+          height: 100%;
+          width: 100%;
+          background: #fff;
+          
+      }
+      
+    }
+  }
+}
+
+
+.ham-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+     #navbar {
+      .nav-container{
+        display: none;
+      }
+
+      .ham-container {
+        position: relative;
+        width: 100vw;
+        height: auto;
+        padding: 1.5rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+         .ham-logo {
+          & > a {
+            font-size: large;
+            font-weight: 600;
+          }
+         }
+
+
+        .ham-menu {
+          position: relative;
+          display: flex;
+          z-index: 999;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          & > p {
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+            right: 0;
+            height: 2px;
+            width: 2rem;
+            background-color: var(--primary);
+          }
+          & > p:nth-child(1) {
+            transform: translateY(0.3rem);
+          }
+          & > p:nth-child(2) {
+            transform: translateY(-0.3rem);
+          }
+        }
+
+        .menu-open {
+          & > p:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          & > p:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+        }
+
+        .ham-routes {
+          position: absolute;
+          top: 7vh;
+          z-index: 999;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.5rem;
+          padding: 1rem 4rem;
+          color:var(--secondary);
+          background-color: var(--primary);
+          width: 99vw;
+          height: 45vh;
+          border-radius: 25px;
+          transition: all 0.3s ease-in-out;
+          transform: translateX(100%);
+
+          & > a {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Aeonik';
+            text-transform: capitalize;
+            letter-spacing: 1px;
+
+            & > button {
+              padding: 0.8rem 3rem;
+              border: none;
+              border-radius: 25px;
+              background-color: var(--accent);
+              color: var(--secondary);
+              font-family: 'Aeonik';
+              font-size: 1.5rem;
+              font-weight: 600;
+              letter-spacing: 0.05em;
+            }
+          }
+        }
+
+        .ham-open {
+          transform: translateX(-10%);
+        }
+      }
+     }
+}
