@@ -155,7 +155,7 @@ nav {
           padding: 1rem 4rem;
           color:var(--secondary);
           background-color: var(--primary);
-          width: 99vw;
+          width: calc(100vw - 2rem);
           height: 45vh;
           border-radius: 25px;
           transition: all 0.3s ease-in-out;

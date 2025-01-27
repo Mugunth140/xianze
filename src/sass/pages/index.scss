@@ -4,6 +4,7 @@
 
 
 .heroContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,12 +61,14 @@
    .heroContainer {
      overflow: hidden;
     .heroTitle {
-        font-size: 5rem;
+        font-size: calc(100vw / 6);
     }
 
     .heroSubtitle {
         font-size: 1rem;
-        width: 25rem;
+        width: 100%;
+        padding: 0 2rem;
+
     }
    }
 }
