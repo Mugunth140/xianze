@@ -5,7 +5,7 @@ import '@/sass/pages/home.scss';
 
 const Home = () => {
   return (
-    <main>
+    <main data-scroll-section>
     <div className="heroBg">
       <Waves
         lineColor="lightblue"

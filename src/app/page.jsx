@@ -5,7 +5,7 @@ import "../sass/pages/index.scss";
 export default function Main() {
   return (
    <>
-   <main className="Container">
+   <main className="Container" >
     <Home />
     <About />
    </main>

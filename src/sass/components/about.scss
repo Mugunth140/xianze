@@ -1,5 +1,64 @@
-.aboutContainer {
-    height: 100vh;
-    width: 100%;
-    background: #000;
+.aboutSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .aboutContainer {
+   // background: red;
+    height: 70%;
+    width: 80%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    
+
+    .aboutContent {
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        z-index: 3;
+
+        .aboutTitle {
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .aboutPara {
+            font: 400 1.2rem/1.5 Inter;
+            color: var(--base);
+            text-align: justify;
+        }
+    }
+
+    .aboutImg {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        
+        img {
+            object-fit: cover;
+            border-radius:1.2rem;
+        }
+    }
+  }
+}
+
+.animatedSvg {
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    filter: blur(80px);
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    position: absolute;
+    top: -10;
+    left: -20;
+    z-index: 0;
 }
