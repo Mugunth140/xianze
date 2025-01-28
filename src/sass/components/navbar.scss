@@ -1,6 +1,6 @@
-nav {
+#navbar {
   width: 100%;
-  position: relative;
+  position: fixed;
   height: auto;
   display: flex;
   justify-content: center;
@@ -166,7 +166,7 @@ nav {
             font-size: 2rem;
             font-weight: 600;
             text-align: center;
-            font-family: 'Aeonik';
+            font-family: Inter;
             text-transform: capitalize;
             letter-spacing: 1px;
 
@@ -176,7 +176,7 @@ nav {
               border-radius: 25px;
               background-color: var(--accent);
               color: var(--secondary);
-              font-family: 'Aeonik';
+              font-family: Inter;
               font-size: 1.5rem;
               font-weight: 600;
               letter-spacing: 0.05em;
