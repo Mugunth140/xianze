@@ -1,5 +1,5 @@
 import SplitText from "@/components/SplitText";
-import aboutImg from "../../public/images/about_img.jpg";
+import aboutImg from "../../public/images/aboutImage.png";
 import Image from "next/image";
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
           <p className="aboutPara">
             Xianze is an annual technical symposium that brings together
             students from colleges across the region to showcase their
-            creativity, innovation, and technical expertise. Organized by the Mindbender's Association from
+            creativity, innovation, and technical expertise. Organized by the Mind bender's Association from
             Department of Software Systems and Computer Science (PG) Since 2011, Xianze
             features an exciting mix of technical and non-technical events aimed
             at encouraging participants to think critically and collaborate
@@ -26,12 +26,13 @@ const About = () => {
         </div>
 
         <div className="aboutImg">
-          <Image src={aboutImg} alt="about_image" width={450} height={650} />
+         <Image src={aboutImg} alt="about_image" width={450} height={650} />
         </div>
       </div>
-      <div className="animatedSvg"></div>
+      {/* <div className="animatedSvg"></div> */}
     </section>
   );
 };
 
 export default About;
+ 
