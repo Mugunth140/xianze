@@ -3,6 +3,7 @@
   --secondary: #ffffff;
   --accent : #4B70F5;
   --base:#5a5a5a;
+  --counter:#e94560;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -64,3 +65,4 @@ a {
 @import "../sass/components/navbar.scss";
 @import "../sass/components/about.scss";
 @import "../sass/components/eventIntro.scss";
+@import "../sass/components/countdown.scss";

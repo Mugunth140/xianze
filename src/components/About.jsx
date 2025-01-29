@@ -13,7 +13,7 @@ const About = () => {
             textAlign="left"
           />
           <p className="aboutPara">
-            Xianze is an annual technical symposium that brings together
+            Xianze is an annual technical fest that brings together
             students from colleges across the region to showcase their
             creativity, innovation, and technical expertise. Organized by the Mind bender's Association from
             Department of Software Systems and Computer Science (PG) Since 2011, Xianze
