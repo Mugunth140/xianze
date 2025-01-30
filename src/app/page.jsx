@@ -1,8 +1,8 @@
 import Home from "../components/Home";
 import About from "../components/About";
-
-import "../sass/pages/index.scss";
 import EventIntro from "@/components/EventIntro";
+import RegisterCounter from "@/components/RegisterCounter";
+import "../sass/pages/index.scss";
 
 export default function Main() {
   return (
@@ -11,6 +11,7 @@ export default function Main() {
     <Home />
     <About />
     <EventIntro />
+    <RegisterCounter />
    </main>
    </>
   );

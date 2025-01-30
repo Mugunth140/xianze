@@ -1,6 +1,7 @@
 import Waves from "@/components/HeroBg";
 import DecryptedText from "@/components/DecryptedText";
 import { FaArrowDown } from "react-icons/fa6";
+import Link from "next/link";
 import '@/sass/pages/home.scss';
 
 const Home = () => {
@@ -41,7 +42,7 @@ const Home = () => {
       <div className="heroSubtitle">
         <p>Join the largest gathering of young tech enthusiasts and experience the thrill of competition, learning, as well as innovation, The place where ideas come alive and futures are shaped.</p>
       </div>
-      <button className="heroBtn">Register now</button>
+      <Link href="/register" className="heroBtn">Register now</Link>
 
       <div className="heroScroller">
         <FaArrowDown />

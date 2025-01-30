@@ -1,5 +1,3 @@
-'use client'
-import Countdown from '@/components/Countdown';
 import '../sass/components/eventIntro.scss';
 import Image from 'next/image';
 
@@ -27,9 +25,6 @@ const EventIntro = () => {
             ))}
           </ul>
         </div>
-        {/* <div className="eventIntroRegister">
-          <Countdown targetDate="2025-02-14T23:59:59" />
-        </div> */}
       </div>
     </div>
   );
