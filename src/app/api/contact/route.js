@@ -3,19 +3,20 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const { name, email, message } = await req.json();
+    const appPassword = process.env.NEXT_PUBLIC_GMAIL_APP_PASSWORD;
+    const appEmail = process.env.NEXT_PUBLIC_GMAIL_EMAIL;
 
-    // Configure Nodemailer Transporter
     let transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "xianze2025@gmail.com", // Official Event Email
-        pass: "your-app-password", // Use App Password (Not regular Gmail password)
+        user: appEmail,
+        pass: appPassword, 
       },
     });
 
     let mailOptions = {
       from: `"Xianze Contact Form" <${email}>`,
-      to: "xianze2025@gmail.com", 
+      to: appEmail, 
       subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };

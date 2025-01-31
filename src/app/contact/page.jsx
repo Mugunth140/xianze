@@ -7,6 +7,8 @@ import "@/sass/pages/contact.scss";
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // State for loader
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,18 +17,31 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/sendMail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    setIsLoading(true); // Show loader before starting the request
 
-    if (response.ok) {
-      alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send message. Please try again.");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatusMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setStatusMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false); // Hide loader after the request completes
     }
+
+    // Clear status message after a few seconds
+    setTimeout(() => {
+      setStatusMessage("");
+    }, 5000);
   };
 
   return (
@@ -35,11 +50,10 @@ const Contact = () => {
         <h2>Contact Us</h2>
         <p>Have questions? Reach out to us!</p>
 
-        <Link href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK" target="_blank" className="whatsappLink">
+        <Link href="https://chat.whatsapp.com/GObiBOjDxn5KTC2GVwCXXp" target="_blank" className="whatsappLink">
           <FaWhatsapp /> WhatsApp Community
         </Link>
 
-        {/* Student Coordinators Dropdown */}
         <div className="dropdown">
           <button className="dropdownButton" onClick={() => setIsOpen(!isOpen)}>
             Student Coordinators 
@@ -53,7 +67,18 @@ const Contact = () => {
           )}
         </div>
 
-        {/* Contact Form */}
+        {statusMessage && (
+          <div className={`statusMessage ${statusMessage.includes("successfully") ? "success" : "error"}`}>
+            {statusMessage}
+          </div>
+        )}
+
+        {isLoading && (
+          <div className="loader">
+            <div className="spinner"></div>
+          </div>
+        )}
+
         <form className="contactForm" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
           <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
