@@ -1,6 +1,6 @@
 .aboutSection {
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--secondary);
   display: flex;
@@ -66,13 +66,13 @@
 @media screen and (max-width: 768px) {
     .aboutSection {
         .aboutContainer {
-            //background: #000;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
             width: 100%;
+            margin-top: 2rem;
 
             & > .aboutContent {
                 justify-content: flex-end;
