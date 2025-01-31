@@ -1,8 +1,12 @@
-import React from 'react'
+import "@/sass/pages/event.scss";
 
 const Events = () => {
   return (
-    <div>Events</div>
+   <div className="eventSection">
+     <div className="eventContainer">
+      
+     </div>
+   </div>
   )
 }
 
