@@ -11,8 +11,8 @@ const Navbar = () => {
                 <Link href="/">xianze</Link>
              </div>
              <div className="nav-routes">
-                <Link href="/about">about</Link>
-                <Link href="/events">event</Link>
+                <Link href="/events">events</Link>
+                <Link href="/schedule">schedule</Link>
                 <Link href="/contact">contact</Link>
              </div>
                 <Link href="/register"  className="nav-btn-container">

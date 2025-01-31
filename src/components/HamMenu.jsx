@@ -23,8 +23,8 @@ export const HamMenu = () => {
     </div>
     <div className="ham-routes">
      <Link href="/" onClick={toggleMenu}>Home</Link>
-     <Link href="/about" onClick={toggleMenu} >About</Link>
      <Link href="/events" onClick={toggleMenu}>Events</Link>
+     <Link href="/schedule" onClick={toggleMenu} >Schedule</Link>
      <Link href="/contact" onClick={toggleMenu}>Contact</Link>
      <Link href="/register" onClick={toggleMenu}><button>Register</button></Link>
     </div>

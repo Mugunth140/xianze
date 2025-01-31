@@ -69,7 +69,7 @@ const SplitText = ({
                 animate={inView ? animationTo : animationFrom}
                 transition={{
                   delay: index * delay,
-                  duration: 0.6,
+                  duration: 0.3,
                   ease: easing,
                 }}
                 onAnimationComplete={() => handleAnimationComplete(index)}

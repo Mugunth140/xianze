@@ -1,5 +1,6 @@
 import '../sass/components/eventIntro.scss';
 import Image from 'next/image';
+import SplitText from '../components/SplitText';
 
 const eventData = [
   { text: "Intense technical competitions & hackathons", img: "/gif/hackathon.gif" },
@@ -14,7 +15,11 @@ const EventIntro = () => {
     <div className="eventIntroSection">
       <div className="eventIntroContainer">
         <div className="eventIntroContent">
-          <h1 className="eventIntroTitle">Find the Event that Matches Your Passion</h1>
+          <SplitText text="Find the Event that Matches Your Passion"
+          className="eventIntroTitle" 
+          textAlign="center"
+          />
+
           <h3 className="eventIntroSubTitle">What to Expect?</h3>
           <ul className="eventList">
             {eventData.map((event, index) => (

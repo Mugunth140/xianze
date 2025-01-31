@@ -1,12 +1,20 @@
-import Countdown from "@/components/Countdown";
-import "../sass/components/registerCounter.scss";
+'use client'
+
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import SplitText from "../components/SplitText";
+import "../sass/components/registerCounter.scss";
+
+const Countdown = dynamic(() => import("../components/Countdown"), { ssr: false });
 
 const RegisterCounter = () => {
   return (
     <section className="registerCounterSection">
       <div className="registerCounterContainer">
-        <h2 className="registerCounterTitle">Limited Slots – The Countdown is On!</h2>
+        <SplitText text="Limited Slots – The Countdown is On!" 
+        className="registerCounterTitle" 
+        textAlign="center"
+        />
         <p className="registerCounterSubtitle">
           Secure your spot before it's too late. Register now and be part of Xianze!
         </p>
