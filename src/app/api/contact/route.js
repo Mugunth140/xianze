@@ -1,10 +1,12 @@
 import nodemailer from "nodemailer";
 
-export async function POST(req) {
+export async function POST(req, res) {
   try {
     const { name, email, message } = await req.json();
-    const appPassword = process.env.NEXT_PUBLIC_GMAIL_APP_PASSWORD;
-    const appEmail = process.env.NEXT_PUBLIC_GMAIL_EMAIL;
+
+    const appPassword = process.env.APP_PASSWORD;
+    const appEmail = process.env.APP_EMAIL;
+
 
     let transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -23,8 +25,9 @@ export async function POST(req) {
 
     await transporter.sendMail(mailOptions);
 
-    return Response.json({ message: "Email Sent Successfully" }, { status: 200 });
+    res.status(200).json({ message: "Email Sent Successfully" });
   } catch (error) {
-    return Response.json({ error: "Failed to send email" }, { status: 500 });
+    console.error("Error sending email:", error);
+    res.status(500).json({ error: "Failed to send email" });
   }
 }
