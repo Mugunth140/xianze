@@ -11,7 +11,7 @@ const RegisterCounter = () => {
   return (
     <section className="registerCounterSection">
       <div className="registerCounterContainer">
-        <SplitText text="Limited Slots – The Countdown is On!" 
+        <SplitText text="Limited Availability – Secure Your Spot Now!" 
         className="registerCounterTitle" 
         textAlign="center"
         />
