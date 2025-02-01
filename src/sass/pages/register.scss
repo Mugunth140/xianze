@@ -5,11 +5,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--background);
+    background-image:url("../../../public/images/registerBg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2rem;
   
     .registerContainer {
-      background-color: var(--secondary);
+      background: transparent;
+      backdrop-filter: blur(15px);
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,12 +40,17 @@
           border-radius: 8px;
           font-size: 1rem;
           color: var(--primary);
-          background-color: var(--secondary);
+          background: transparent;
           transition: border-color 0.3s ease;
+
+          & > option {
+             background-color: #1e1e1e1e;
+          }
   
           &:focus {
             outline: none;
             border-color: var(--accent);
+            border-width: 1.5px;
           }
   
           &::placeholder {
@@ -53,23 +62,25 @@
           appearance: none;
           background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235a5a5a'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
-          background-position: right 0.75rem center;
-          background-size: 12px;
+          background-position: right 1rem center;
+          background-size: 1.2rem;
         }
   
         .registerButton {
           padding: 0.75rem;
-          background-color: var(--accent);
+          background-color: var(--primary);
           color: var(--secondary);
           border: none;
           border-radius: 8px;
           font-size: 1rem;
+          font-family: Inter;
           font-weight: 600;
           cursor: pointer;
-          transition: background-color 0.3s ease;
+          transition: background-color 0.5s ease;
   
           &:hover {
-            background-color: var(--accent-dark);
+            background-color: var(--accent);
+            color: var(--secondary);
           }
   
           &:disabled {
@@ -85,5 +96,16 @@
         color: var(--counter);
         font-size: 0.9rem;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .registerSection {
+        padding-block :1rem;
+        padding-inline:1rem;
+        .registerContainer {
+            backdrop-filter: none;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
     }
   }
