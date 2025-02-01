@@ -8,7 +8,7 @@ const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [statusMessage, setStatusMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // State for loader
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,10 +35,9 @@ const Contact = () => {
     } catch (error) {
       setStatusMessage("An error occurred. Please try again later.");
     } finally {
-      setIsLoading(false); // Hide loader after the request completes
+      setIsLoading(false); 
     }
 
-    // Clear status message after a few seconds
     setTimeout(() => {
       setStatusMessage("");
     }, 5000);

@@ -1,17 +1,28 @@
+// Import SCSS files before any other rules
+@use "../sass/pages/index.scss" as *;
+@use "../sass/pages/home.scss" as *;
+@use "../sass/pages/schedule.scss" as *;
+@use "../sass/pages/event.scss" as *;
+@use "../sass/pages/register.scss" as *;
+
+@use "../sass/components/navbar.scss" as *;
+@use "../sass/components/about.scss" as *;
+@use "../sass/components/eventIntro.scss" as *;
+@use "../sass/components/countdown.scss" as *;
+@use "../sass/components/registerCounter.scss" as *;
+
 :root {
   --primary: #1c1c1c;
   --secondary: #ffffff;
-  --accent : #4B70F5;
-  --base:#5a5a5a;
-  --counter:#e94560;
+  --accent: #4B70F5;
+  --accent-dark: #3e5db2;
+  --base: #5a5a5a;
+  --counter: #e94560;
+  --background: #f4f4f4;
+  --border-radius: 8px;
+  --input-border-color: #ccc;
+  --hover-opacity: 0.8;
 }
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
 
 @font-face {
   font-family: "Aeonik";
@@ -47,25 +58,5 @@ a {
 }
 
 .hidden {
-  display: none
+  display: none;
 }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }
-
-
-// pages import
-@import "../sass/pages/index.scss";
-@import "../sass/pages/home.scss";
-@import "../sass/pages/schedule.scss";
-@import "../sass/pages/event.scss";
-
-// components import
-@import "../sass/components/navbar.scss";
-@import "../sass/components/about.scss";
-@import "../sass/components/eventIntro.scss";
-@import "../sass/components/countdown.scss";
-@import "../sass/components/registerCounter.scss";
