@@ -17,7 +17,7 @@ const Register = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [buttonMessage, setButtonMessage] = useState("Register");
 
   const eventsList = [
     "Technical Connection",
@@ -216,7 +216,6 @@ const Register = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    // Reset branch if course changes
     if (e.target.name === "course") {
       setFormData((prev) => ({
         ...prev,
@@ -226,7 +225,6 @@ const Register = () => {
       }));
     }
 
-    // Reset otherBranch if branch changes
     if (e.target.name === "branch" && e.target.value !== "Others") {
       setFormData((prev) => ({
         ...prev,
@@ -238,26 +236,31 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setMessage("");
-
+    setButtonMessage("Submitting...");
+  
+    if (!/^\d{10,}$/.test(formData.contact)) {
+      setButtonMessage("Invalid Contact Number");
+      setLoading(false);
+      return;
+    }
+  
     const submittedData = {
       ...formData,
-      course:
-        formData.course === "Others" ? formData.otherCourse : formData.course,
-      branch:
-        formData.branch === "Others" ? formData.otherBranch : formData.branch,
+      course: formData.course === "Others" ? formData.otherCourse : formData.course,
+      branch: formData.branch === "Others" ? formData.otherBranch : formData.branch,
     };
-
+  
     try {
       const res = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submittedData),
       });
-
+  
       const data = await res.json();
+  
       if (res.ok) {
-        setMessage("Registration Successful!");
+        setButtonMessage("Registered Successfully");
         setFormData({
           name: "",
           email: "",
@@ -270,14 +273,15 @@ const Register = () => {
           otherBranch: "",
         });
       } else {
-        setMessage(data.error || "Something went wrong.");
+        setButtonMessage(data.error); 
       }
     } catch (error) {
-      setMessage("Failed to submit. Please try again.");
+      setButtonMessage("Failed to submit. Try again.");
     }
-
+  
     setLoading(false);
   };
+  
 
   return (
     <section className="registerSection">
@@ -301,7 +305,6 @@ const Register = () => {
             required
           />
 
-          {/* Course Dropdown */}
           <select
             name="course"
             value={formData.course}
@@ -316,7 +319,6 @@ const Register = () => {
             ))}
           </select>
 
-          {/* Show input if "Others" is selected */}
           {formData.course === "Others" && (
             <input
               type="text"
@@ -328,7 +330,6 @@ const Register = () => {
             />
           )}
 
-          {/* Branch Dropdown (depends on course selection) */}
           <select
             name="branch"
             value={formData.branch}
@@ -344,7 +345,6 @@ const Register = () => {
               ))}
           </select>
 
-          {/* Show input if "Others" is selected */}
           {formData.branch === "Others" && (
             <input
               type="text"
@@ -365,7 +365,7 @@ const Register = () => {
             required
           />
           <input
-            type="text"
+            type="tel"
             name="contact"
             placeholder="Contact Number"
             value={formData.contact}
@@ -388,10 +388,9 @@ const Register = () => {
           </select>
 
           <button type="submit" disabled={loading} className="registerButton">
-            {loading ? "Submitting..." : "Register"}
+            {buttonMessage}
           </button>
         </form>
-        {message && <p className="formMessage">{message}</p>}
       </div>
     </section>
   );
