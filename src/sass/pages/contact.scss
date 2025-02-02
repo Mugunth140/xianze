@@ -1,5 +1,9 @@
 .contactSection {
-  background: var(--secondary);
+  background-image: url("../../../public/images/contactBg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(0, 6, 44);
   color: var(--secondary);
   padding: 3rem 1rem;
   display: flex;
@@ -15,7 +19,8 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background: var(--primary);
+    background: rgba(255, 255, 255, 0.088);
+    backdrop-filter: blur(15px);
     color: var(--secondary);
 
     h2 {
@@ -51,7 +56,6 @@
       }
     }
 
-    /* Dropdown Section */
     .dropdown {
       margin-bottom: 1.5rem;
 
@@ -110,8 +114,9 @@
         padding: 10px;
         border: 1px solid var(--base);
         border-radius: 5px;
+        outline-color: var(--accent);
         font-size: 1rem;
-        background: var(--base);
+        background: rgb(156, 154, 154);
         color: var(--secondary);
       }
 
