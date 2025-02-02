@@ -54,7 +54,8 @@
           }
   
           &::placeholder {
-            color: var(--base);
+            color: var(--primary);
+            background: transparent;
           }
         }
   
