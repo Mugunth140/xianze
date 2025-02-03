@@ -4,134 +4,131 @@ const eventData = [
   {
     id: 1,
     title: "Technical Connection",
-    college: "KG College of Arts and Science",
-    summary: "Two-round technical quiz with PPT-based questions",
-    image: "/images/tech-quiz.jpg",
+    summary: "Two-round visual based questions",
+    image: "/images/event-connection.svg",
     details: {
       rules: [
-        "2 members per team",
-        "45-minute time limit for Round 1",
-        "3 questions per PPT slide"
+        "Teams should consist of 2 members",
+        "Cheating or rule violations lead to disqualification",
+        "Judges decisions are final"
       ],
       instructions: [
+        "45-minute time limit for Round 1",
         "Top scorers advance to Round 2",
-        "No external resources allowed"
+        "3 questions per PPT slide",
       ],
-      note: ["Bring college ID card"]
+      note: ["No external resources allowed"]
     }
   },
   {
     id: 2,
     title: "Paper Presentation",
     summary: "Technology-focused research presentations",
-    college: "KG College of Arts and Science",
-    image: "/images/paper-presentation.jpg",
+    image: "/images/event-presentation.svg",
     details: {
       rules: [
-        "Solo or 2-member teams",
-        "5-8 minute presentation",
-        "Submit PPT to xianze2025@gmail.com"
-      ],
-      instructions: [
-        "Themes include AI, Blockchain, Cybersecurity",
+        "Teams consist of maximum 2 members",
         "Strict time limit enforcement"
       ],
-      note: ["Laptops provided for presentation"]
+      instructions: [
+        "PPT Should consists of minimum 8 slides",
+        "5-8 minute time limit per presentation",
+      ],
+      note: ["Themes include AI,Ml,Data Science,BlockChain,Network Security,IOT,NLP"]
     }
   },
   {
     id: 3,
     title: "Technical Quiz",
-    summary: "Multi-round programming and tech quiz",
-    college: "KG College of Arts and Science",
-    image: "/images/tech-quiz2.jpg",
+    summary: "Multi-round technical quiz",
+    image: "/images/event-quiz.svg",
     details: {
       rules: [
         "2 members per team",
-        "No electronic devices allowed",
+        "No smart devices allowed",
         "Tie-breaker rounds available"
       ],
       instructions: [
-        "Covers programming languages and CS fundamentals",
-        "Multiple choice/True-False questions"
+        "Quiz consists of 2 rounds",
+        "Questions based on MCQ, True/False, and Fill-in-the-blanks",
       ],
-      note: ["No calculator allowed"]
+      note: ["Topics: Technical, Programming, or Scientific fields"]
     }
   },
   {
     id: 4,
     title: "Mini Hackathon",
-    summary: "3-hour rapid prototyping challenge",
-    college: "KG College of Arts and Science",
-    image: "/images/hackathon.jpg",
+    summary: "2.5 hour rapid prototyping challenge",
+   
+    image: "/images/event-hackathon.svg",
     details: {
       rules: [
-        "2-4 members per team",
+        "Team can consists of 2-4 members",
         "On-the-spot topic revelation",
         "AI tools allowed"
       ],
       instructions: [
-        "Complete prototype within 3 hours",
+        "Complete the prototype within the deadline",
         "Judging based on creativity and implementation"
       ],
-      note: ["Bring your own laptop"]
+      note: ["Participants should bring their own laptop"]
     }
   },
   {
     id: 5,
-    title: "Debugging Challenge",
+    title: "Debugging",
     summary: "Multi-round code debugging competition",
-    college: "KG College of Arts and Science",
-    image: "/images/debugging.jpg",
+   
+    image: "/images/event-debugging.svg",
     details: {
       rules: [
-        "Max 2 members per team",
+        "Team consists of maximum 2 members",
+        "No smart devices allowed",
         "C/C++/Java/Python only",
-        "No mobile phones allowed"
       ],
       instructions: [
         "Two elimination rounds",
         "Time-bound challenges"
       ],
-      note: ["ID proof required"]
+      note: ["Systems will be provided"]
     }
   },
   {
     id: 6,
     title: "Break the Query",
-    summary: "SQL and database challenge series",
-    college: "KG College of Arts and Science",
-    image: "/images/sql-challenge.jpg",
+    summary: "SQL query challenge series",
+    
+    image: "/images/event-query.svg",
     details: {
       rules: [
-        "2-4 members per team",
+        "Team consists of 2-4 members",
         "Three progressive rounds",
         "2-hour time limit"
       ],
       instructions: [
-        "Real-world query scenarios",
-        "Riddle-based initial round"
+        "Riddle-based initial round",
+        "Fun filled challenges",
       ],
-      note: ["Personal laptops mandatory"]
+      note: ["Participants should bring their own laptop"]
     }
   },
   {
     id: 7,
     title: "Gaming (Free Fire)",
     summary: "Multi-stage mobile gaming tournament",
-    college: "KG College of Arts and Science",
-    image: "/images/gaming.jpg",
+  
+    image: "/images/event-gaming.svg",
     details: {
       rules: [
-        "4-player squads only",
-        "Battle Royal & Clash Squad modes",
-        "No hacks/exploits allowed"
+        "4 player squad from same college",
+        "Cheating, use of hack, exploiting gliches is strictly prohibited",
+        "Misbehavior or disputes result in disqualification"
       ],
       instructions: [
-        "Network setup responsibility",
+        "Battle Royal & Clash Squad modes",
         "Skin restrictions in Clash Squad"
       ],
-      note: ["WiFi not provided"]
+      note: ["WiFi will not be provided"]
     }
   }
 ];
