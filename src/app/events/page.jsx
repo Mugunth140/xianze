@@ -1,3 +1,4 @@
+import SplitText from "@/components/SplitText";
 import "@/sass/pages/events.scss";
 
 const eventData = [
@@ -137,14 +138,18 @@ const eventData = [
 export default function EventsPage() {
   return (
     <div className="events-container">
-      <header className="events-header">
-        <h1>XIANZE'25 Events</h1>
+     <header className="events-header">
+     <SplitText
+            text="XIANZE'25 EVENTS"
+            className="events-title"
+            textAlign="left"
+          />
       </header>
 
       <div className="events-stack">
         {eventData.map((event, index) => (
+          <div className="eventStack-container" key={event.id}>
           <div 
-            key={event.id}
             className="event-card"
             style={{ 
               "--sticky-offset": `${index * 40}px`,
@@ -178,6 +183,7 @@ export default function EventsPage() {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         ))}
       </div>
