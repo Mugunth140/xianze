@@ -21,10 +21,8 @@
   padding: 2rem 0;
 
   & > .eventStack-container {
-    max-height: 100vh;
+    max-height: 100%;
     width: 100%;
-    position: sticky;
-    top: 8%;
     background: transparent;
   }
 
@@ -35,7 +33,7 @@
   border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   margin: 1rem auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   max-width: 800px;
   transition: all 0.3s ease;
   transform-origin: center top;
@@ -147,6 +145,7 @@
 
   .event-card {
     margin: 0.5rem auto;
+    margin-bottom: 3rem;
     top: calc(10px + var(--sticky-offset));
     
     + .event-card {
