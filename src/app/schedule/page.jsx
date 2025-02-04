@@ -4,10 +4,10 @@ import "@/sass/pages/schedule.scss";
 
 const Schedule = () => {
   return (
-   <>
+   <div className="scheduleSection">
    <EventSchedule />
    <FAQ />
-   </>
+   </div>
   )
 }
 
