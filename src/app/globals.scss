@@ -11,6 +11,7 @@
 @use "../sass/components/countdown.scss" as *;
 @use "../sass/components/registerCounter.scss" as *;
 @use "../sass/components/eventSchedule.scss" as *;
+@use "../sass//components/faq.scss" as *;
 
 :root {
   --primary: #1c1c1c;
@@ -23,8 +24,6 @@
   --border-radius: 8px;
   --input-border-color: #ccc;
   --hover-opacity: 0.8;
-  // --sticky-offset: 20px;
-  // --mobile-stack-offset: 10px;
   --border-radius: 8px;
 }
 

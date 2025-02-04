@@ -1,20 +1,20 @@
 // Colors
-$primary-bg: #121212;
-$card-bg: #1e1e1e;
-$border-color: rgba(255, 255, 255, 0.1);
-$text-primary: #fff;
-$text-secondary: #bbb;
+$primary-bg: #f9f9f9;
+$card-bg: #ffffff;
+$border-color: rgba(0, 0, 0, 0.1);
+$text-primary: #333;
+$text-secondary: #555;
 $accent: #4a90e2;
 
 .schedule-container {
   max-width: 90%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 2rem auto;
   margin-top: 6rem;
   padding: 2rem;
-  background: var(--primary, $card-bg);
+  background: $card-bg;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 
   @media (max-width: 768px) {
@@ -27,13 +27,14 @@ $accent: #4a90e2;
 .heading {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--secondary, $text-primary);
+  color: $text-primary;
   margin-bottom: 1.5rem;
+  border-bottom: 2px solid $accent;
   padding-bottom: 0.5rem;
   display: inline-block;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
