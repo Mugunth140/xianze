@@ -24,7 +24,7 @@ const EventIntro = () => {
           <ul className="eventList">
             {eventData.map((event, index) => (
               <li key={index} className="eventItem">
-                <Image src={event.img} alt={event.text} height={30} width={30} className="eventIcon" />
+                <Image src={event.img} alt={event.text} height={30} width={30} className="eventIcon" unoptimized/>
                 <span>{event.text}</span>
               </li>
             ))}

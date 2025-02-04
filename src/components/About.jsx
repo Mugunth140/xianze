@@ -1,5 +1,5 @@
 import SplitText from "@/components/SplitText";
-import aboutImg from "../../public/images/aboutImage.png";
+import aboutImg from "../../public/images/aboutImg.svg";
 import Image from "next/image";
 
 const About = () => {
