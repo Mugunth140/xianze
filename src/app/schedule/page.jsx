@@ -1,8 +1,11 @@
+import EventSchedule from "@/components/EventSchedule";
 import "@/sass/pages/schedule.scss";
 
 const Schedule = () => {
   return (
-    <div>Schedule</div>
+   <>
+   <EventSchedule />
+   </>
   )
 }
 

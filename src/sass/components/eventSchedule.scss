@@ -1,0 +1,90 @@
+// Colors
+$primary-bg: #121212;
+$card-bg: #1e1e1e;
+$border-color: rgba(255, 255, 255, 0.1);
+$text-primary: #fff;
+$text-secondary: #bbb;
+$accent: #4a90e2;
+
+.schedule-container {
+  max-width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  margin-top: 6rem;
+  padding: 2rem;
+  background: var(--primary, $card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin-top: 6rem;
+    margin-inline: 0.5rem;
+  }
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--secondary, $text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 1.2rem;
+  border-bottom: 1px solid $border-color;
+  transition: all 0.3s ease-in-out;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.time {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $accent;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  color: $text-secondary;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
