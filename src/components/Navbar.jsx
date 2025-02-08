@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav id="navbar">
         <HamMenu />
-        <motion.div className="nav-container" initial={{opacity: 0, y: -100}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5}}>
+        <motion.div className="nav-container" initial={{opacity: 0, y: -100}} animate={{opacity: 1, y: 0}} transition={{duration: 1, }}>
              <div className="nav-logo">
                 <Link href="/">xianze</Link>
              </div>

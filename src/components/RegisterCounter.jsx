@@ -19,7 +19,7 @@ const RegisterCounter = () => {
           Secure your spot before it's too late. Register now and be part of Xianze!
         </p>
         <div className="eventIntroRegister">
-          <Countdown targetDate="2025-02-14T23:59:59" />
+          <Countdown targetDate="2025-02-23T08:59:59" />
         </div>
         <Link href="/register" className="registerButton">Register Now</Link>
       </div>

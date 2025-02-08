@@ -31,7 +31,7 @@ const Home = () => {
       speed={60}
       sequential={true}
       maxIterations={200}
-      characters="!@#$%^&*()_+}{|:';?></div>.,"
+      characters="!@#$%^&*()_+}{|:';?></>@#$%,"
       animateOn="view"
       revealDirection="start"
       className="revealed"
@@ -40,11 +40,11 @@ const Home = () => {
       />
       </div>
       
-      <motion.div className="heroSubtitle" animate={{y: 0, opacity: 1}} initial={{y: 20, opacity: 0}} transition={{duration: 0.5}}>
+      <motion.div className="heroSubtitle" animate={{y: 0, opacity: 1}} initial={{y: 20, opacity: 0}} transition={{duration: 1}}>
     <p>Join the largest gathering of young tech enthusiasts and experience the thrill of competition, learning, as well as innovation, The place where ideas come alive and futures are shaped.</p>
     </motion.div>
       <Link href="/register" className="heroBtn">Register now</Link>
-      <motion.div className="heroScroller" animate={{y: 0, opacity: 1}} initial={{y: 20, opacity: 0}} transition={{duration: 0.5}}>
+      <motion.div className="heroScroller" animate={{y: 0, opacity: 1}} initial={{y: 20, opacity: 0}} transition={{duration: 1}}>
     <FaArrowDown />
     <p>scroll down</p>
     </motion.div>

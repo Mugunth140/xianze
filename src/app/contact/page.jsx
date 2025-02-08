@@ -59,9 +59,9 @@ const Contact = () => {
           </button>
           {isOpen && (
             <ul className="dropdownMenu">
-              <li>John Doe - +91 98765 43210</li>
-              <li>Jane Smith - +91 87654 32109</li>
-              <li>Mike Johnson - +91 76543 21098</li>
+              <li><a href="tel:+918148529920">Sharulatha - 8148529920</a></li>
+              <li><a href="tel:+918072390391">Rajakavika - 8072390391</a></li>
+              <li><a href="tel:+916384761234">Mugunth - 6384761234</a></li>
             </ul>
           )}
         </div>

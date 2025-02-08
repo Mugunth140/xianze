@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import "../sass/components/countdown.scss"; // Import SCSS styles
+import "../sass/components/countdown.scss";
 
 export default function Countdown({ targetDate }) {
   const calculateTimeLeft = () => {
