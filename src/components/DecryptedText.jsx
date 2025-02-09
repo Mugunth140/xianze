@@ -1,7 +1,6 @@
 'use client'
-
 import { useEffect, useState, useRef } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react';
 
 const styles = {
 wrapper: {
