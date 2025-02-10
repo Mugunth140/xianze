@@ -1,4 +1,5 @@
 import "../sass/components/eventSchedule.scss";
+import * as motion from "motion/react-client";
 
 const Schedule = () => {
   const schedule = [
@@ -10,7 +11,7 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="schedule-container">
+    <motion.div className="schedule-container" initial={{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 1}}>
       <h2 className="heading">Event Schedule</h2>
       <ul className="schedule-list">
         {schedule.map((item, index) => (
@@ -20,7 +21,7 @@ const Schedule = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

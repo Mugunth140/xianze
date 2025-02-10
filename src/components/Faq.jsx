@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import "../sass/components/faq.scss";
+import {motion} from "motion/react";
 
 const faqs = [
   {
@@ -37,7 +38,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="faq-container">
+    <motion.div className="faq-container" whileInView={{x: 0, opacity: 1}} initial={{x: 100, opacity: 0}} transition={{duration: 1}}>
       <h2 className="faq-heading">Frequently Asked Questions</h2>
       <div className="faq-list">
         {faqs.map((faq, index) => (
@@ -54,7 +55,7 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

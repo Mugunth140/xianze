@@ -1,6 +1,7 @@
 import '../sass/components/eventIntro.scss';
 import Image from 'next/image';
 import SplitText from '../components/SplitText';
+import * as motion from "motion/react-client";
 
 const eventData = [
   { text: "Intense technical competitions & hackathons", img: "/gif/hackathon.gif" },
@@ -11,6 +12,24 @@ const eventData = [
 ];
 
 const EventIntro = () => {
+
+const containerTransition = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 ,
+    transition: {
+      duration: 2,
+      ease: "linear",
+      staggerChildren: 0.8,
+    }
+  }
+}
+
+const itemTransition = {
+  hidden: { opacity: 0, x: -300 },
+  visible: { opacity: 1, x: 0 }
+}
+
+
   return (
     <div className="eventIntroSection">
       <div className="eventIntroContainer">
@@ -20,15 +39,15 @@ const EventIntro = () => {
           textAlign="center"
           />
 
-          <h3 className="eventIntroSubTitle">What to Expect?</h3>
-          <ul className="eventList">
+          <motion.h3 className="eventIntroSubTitle" initial={{x:100, opacity: 0}} whileInView={{x:0, opacity:1}} transition={{duration: 1}}>What to Expect?</motion.h3>
+          <motion.ul className="eventList" variants={containerTransition} initial="hidden" whileInView="visible">
             {eventData.map((event, index) => (
-              <li key={index} className="eventItem">
+              <motion.li key={index} className="eventItem" variants={itemTransition}> 
                 <Image src={event.img} alt={event.text} height={30} width={30} className="eventIcon" unoptimized/>
                 <span>{event.text}</span>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </div>
