@@ -10,8 +10,8 @@ const Countdown = dynamic(() => import("../components/Countdown"), { ssr: false 
 
 const RegisterCounter = () => {
   return (
-    <motion.section className="registerCounterSection" initial={{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 1}}>
-      <div className="registerCounterContainer">
+    <section className="registerCounterSection" style={{backgroundColor:"white"}}>
+      <motion.div className="registerCounterContainer" initial={{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 1}}>
         <SplitText text="Limited Availability – Secure Your Spot Now!" 
         className="registerCounterTitle" 
         textAlign="center"
@@ -23,8 +23,8 @@ const RegisterCounter = () => {
           <Countdown targetDate="2025-02-23T08:59:59" />
         </div>
         <Link href="/register" className="registerButton">Register Now</Link>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 
