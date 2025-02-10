@@ -9,7 +9,7 @@ const eventData = [
     image: "/images/event-connection.svg",
     details: {
       rules: [
-        "Teams should consist of 2 members",
+        "Teams can consist of 2 members",
         "Cheating or rule violations lead to disqualification",
         "Judges decisions are final"
       ],
@@ -45,7 +45,7 @@ const eventData = [
     image: "/images/event-quiz.svg",
     details: {
       rules: [
-        "2 members per team",
+        "Team consists of 2 members",
         "No smart devices allowed",
         "Tie-breaker rounds available"
       ],
@@ -59,18 +59,18 @@ const eventData = [
   {
     id: 4,
     title: "Mini Hackathon",
-    summary: "2.5 hour rapid prototyping challenge",
+    summary: "3 hour rapid prototyping challenge",
    
     image: "/images/event-hackathon.svg",
     details: {
       rules: [
-        "Team can consists of 2-4 members",
-        "On-the-spot topic revelation",
+        "Team can consists of 2 members",
+        "Prototypes must be completed within 3hr time limit",
         "AI tools allowed"
       ],
       instructions: [
-        "Complete the prototype within the deadline",
-        "Judging based on creativity and implementation"
+        "Judging based on creativity and implementation",
+        "Choose any problem statement related to SDG"
       ],
       note: ["Participants should bring their own laptop"]
     }
@@ -83,7 +83,7 @@ const eventData = [
     image: "/images/event-debugging.svg",
     details: {
       rules: [
-        "Team consists of maximum 2 members",
+        "Team consists of 2 members",
         "No smart devices allowed",
         "C/C++/Java/Python only",
       ],
@@ -102,7 +102,7 @@ const eventData = [
     image: "/images/event-query.svg",
     details: {
       rules: [
-        "Team consists of 2-4 members",
+        "Team consists of 2 members",
         "Three progressive rounds",
         "2-hour time limit"
       ],
