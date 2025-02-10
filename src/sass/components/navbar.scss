@@ -13,6 +13,10 @@
   font-size: large;
   z-index: 9;
 
+  @media screen and (max-width:768px) {
+    justify-content: center;
+  }
+
   .nav-logo {
      & > a {
       transition: color 0.2s linear;
@@ -92,6 +96,7 @@
 
 @media screen and (max-width: 768px) {
      #navbar {
+     justify-content: flex-start;
       .nav-container{
         display: none;
       }

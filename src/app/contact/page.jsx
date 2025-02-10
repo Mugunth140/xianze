@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
+import {motion} from "motion/react";
 import "@/sass/pages/contact.scss";
 
 const Contact = () => {
@@ -45,7 +46,7 @@ const Contact = () => {
 
   return (
     <section className="contactSection">
-      <div className="contactContainer">
+      <motion.div className="contactContainer" initial={{ opacity: 0 , y:100}} animate={{ opacity: 1 , y:0 }} transition={{ duration: 1 }}>
         <h2>Contact Us</h2>
         <p>Have questions? Reach out to us!</p>
 
@@ -84,7 +85,7 @@ const Contact = () => {
           <textarea name="message" placeholder="Your Message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
           <button type="submit" className="submitButton">Send Message</button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

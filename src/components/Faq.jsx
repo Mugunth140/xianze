@@ -38,7 +38,7 @@ const FAQ = () => {
   };
 
   return (
-    <motion.div className="faq-container" whileInView={{x: 0, opacity: 1}} initial={{x: 100, opacity: 0}} transition={{duration: 1}}>
+    <motion.div className="faq-container" initial={{x: -100, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: 1}}>
       <h2 className="faq-heading">Frequently Asked Questions</h2>
       <div className="faq-list">
         {faqs.map((faq, index) => (

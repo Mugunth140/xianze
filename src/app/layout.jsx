@@ -8,6 +8,7 @@ import "./globals.scss";
 <Head>
 <meta name="apple-mobile-web-app-title" content="XIANZE`25" />
 </Head>
+
 export const metadata = {
   title: "Xianze | Home",
   description: "Xianze - An inter-college event featuring a mix of technical and non-technical competitions, challenges, and activities.",

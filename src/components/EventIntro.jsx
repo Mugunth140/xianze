@@ -13,21 +13,30 @@ const eventData = [
 
 const EventIntro = () => {
 
-const containerTransition = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 ,
-    transition: {
-      duration: 2,
-      ease: "linear",
-      staggerChildren: 0.8,
+  const containerTransition = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut", 
+        staggerChildren: 0.3,
+      }
     }
   }
-}
-
-const itemTransition = {
-  hidden: { opacity: 0, x: -300 },
-  visible: { opacity: 1, x: 0 }
-}
+  
+  const itemTransition = {
+    hidden: { opacity: 0, x: -200 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 0.8
+      }
+    }
+  }
+  
 
 
   return (

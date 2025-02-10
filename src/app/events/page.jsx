@@ -138,16 +138,23 @@ export default function EventsPage() {
       opacity: 1,
       transition: {
         duration: 1,
-        ease: "linear",
+        ease: "easeInOut",
         staggerChildren: 0.5,
-      },
-    },
-  };
+      }
+    }
+  }
 
   const itemTransition = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
+    hidden: { opacity: 0, x: -300 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeOut",
+        duration: 1
+      }
+    }
+  }
 
   return (
     <div className="events-container">
@@ -164,12 +171,16 @@ export default function EventsPage() {
         variants={containerTransition}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: false }} // Ensure this triggers on every scroll
       >
         {eventData.map((event, index) => (
           <motion.div
             className="eventStack-container"
             key={event.id}
             variants={itemTransition}
+            whileInView="visible" // Ensure each item animates individually when it enters the viewport
+            initial="hidden"
+            viewport={{ once: false }} // Ensure this triggers on every scroll
           >
             <div className="event-card">
               <div className="card-visual">
@@ -207,3 +218,4 @@ export default function EventsPage() {
     </div>
   );
 }
+

@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import {motion} from "motion/react";
 
 export const HamMenu = () => {
 
@@ -13,7 +14,7 @@ export const HamMenu = () => {
 
   return (
     <>
-    <div className="ham-container">
+    <motion.div className="ham-container" initial={{opacity: 0, y:-30}} animate={{opacity:1, y:0}} transition={{duration: 1}}>
     <div className="ham-logo">
         <Link href="/">Xianze</Link>
     </div>
@@ -28,7 +29,7 @@ export const HamMenu = () => {
      <Link href="/contact" onClick={toggleMenu}>Contact</Link>
      <Link href="/register" onClick={toggleMenu}><button>Register</button></Link>
     </div>
-    </div>
+    </motion.div>
     </>
   )
 }

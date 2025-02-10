@@ -1,6 +1,6 @@
 "use client";
-
 import { useState } from "react";
+import {motion} from "motion/react"
 import "../../sass/pages/register.scss";
 
 const Register = () => {
@@ -285,7 +285,7 @@ const Register = () => {
 
   return (
     <section className="registerSection">
-      <div className="registerContainer">
+      <motion.div className="registerContainer" initial={{ opacity: 0 , y:100}} animate={{ opacity: 1 , y:0 }} transition={{ duration: 1 }}>
         <h2>Event Registration</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -391,7 +391,7 @@ const Register = () => {
             {buttonMessage}
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };
