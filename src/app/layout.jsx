@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Analytics/>
       <ReactLenis root>
       <body className={inter.className}>
         <Navbar />
