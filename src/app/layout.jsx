@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {ReactLenis} from "@/utils/lenis";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.scss";
 
 <Head>
