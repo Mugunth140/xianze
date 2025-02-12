@@ -51,7 +51,7 @@ const Contact = () => {
         <p>Have questions? Reach out to us!</p>
 
         <Link href="https://chat.whatsapp.com/GObiBOjDxn5KTC2GVwCXXp" target="_blank" className="whatsappLink">
-          <FaWhatsapp /> WhatsApp Community
+          <FaWhatsapp  size={22}/> WhatsApp Community
         </Link>
 
         <div className="dropdown">
