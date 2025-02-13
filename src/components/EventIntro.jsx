@@ -19,7 +19,7 @@ const EventIntro = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        ease: "easeInOut", 
+        ease: [0.65, 0, 0.35, 1] ,
         staggerChildren: 0.3,
       }
     }
@@ -31,7 +31,7 @@ const EventIntro = () => {
       opacity: 1, 
       x: 0,
       transition: {
-        ease: "easeOut",
+        ease: [0.65, 0, 0.35, 1],
         duration: 0.8
       }
     }
@@ -48,7 +48,7 @@ const EventIntro = () => {
           textAlign="center"
           />
 
-          <motion.h3 className="eventIntroSubTitle" initial={{x:100, opacity: 0}} whileInView={{x:0, opacity:1}} transition={{duration: 1}}>What to Expect?</motion.h3>
+          <motion.h3 className="eventIntroSubTitle" initial={{x:-100, opacity: 0}} whileInView={{x:0, opacity:1}} transition={{duration: 1}}>What to Expect?</motion.h3>
           <motion.ul className="eventList" variants={containerTransition} initial="hidden" whileInView="visible">
             {eventData.map((event, index) => (
               <motion.li key={index} className="eventItem" variants={itemTransition}> 
