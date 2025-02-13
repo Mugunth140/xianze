@@ -1,6 +1,8 @@
+import Image from 'next/image'; // Optimize images with Next.js Image component
 import SplitText from "@/components/SplitText";
 import * as motion from "motion/react-client";
 import "@/sass/pages/events.scss";
+import { useMemo } from 'react';
 
 const eventData = [
   {
@@ -132,7 +134,8 @@ const eventData = [
 ];
 
 export default function EventsPage() {
-  const containerTransition = {
+
+  const containerTransition = useMemo(() => ({
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -142,9 +145,9 @@ export default function EventsPage() {
         staggerChildren: 0.5,
       }
     }
-  }
-
-  const itemTransition = {
+  }), []);
+  
+  const itemTransition = useMemo(() => ({
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
@@ -154,7 +157,7 @@ export default function EventsPage() {
         duration: 1
       }
     }
-  }
+  }), []);
 
   return (
     <div className="events-container">
@@ -173,7 +176,7 @@ export default function EventsPage() {
         whileInView="visible"
         viewport={{ once: false }} // Ensure this triggers on every scroll
       >
-        {eventData.map((event, index) => (
+        {eventData.map((event) => (
           <motion.div
             className="eventStack-container"
             key={event.id}
@@ -184,10 +187,14 @@ export default function EventsPage() {
           >
             <div className="event-card">
               <div className="card-visual">
-                <div
-                  className="card-image"
-                  style={{ backgroundImage: `url(${event.image})` }}
-                />
+                <div className="card-image">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
                 <span className="card-number">0{event.id}</span>
               </div>
 
@@ -218,4 +225,3 @@ export default function EventsPage() {
     </div>
   );
 }
-

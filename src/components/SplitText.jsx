@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import { motion } from 'motion/react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 
 const SplitText = ({
   text = '',
@@ -12,34 +12,43 @@ const SplitText = ({
   threshold = 0.1,
   rootMargin = '-100px',
   textAlign = 'center',
-  onLetterAnimationComplete,
+  onWordAnimationComplete,
 }) => {
-  const words = text.split(' ').map(word => word.split(''));
-  const letters = words.flat();
+  // Split the text into words (no need to split letters anymore)
+  const words = useMemo(() => text.split(' '), [text]);
+
   const [inView, setInView] = useState(false);
   const ref = useRef();
   const animatedCount = useRef(0);
 
+  // Define IntersectionObserver here to handle multiple animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          // Reset animated count when it comes into view again
+          animatedCount.current = 0; // Reset so animation triggers again
           setInView(true);
-          observer.unobserve(ref.current);
+        } else {
+          setInView(false); // Optional: reset when it's out of view (if you want it to disappear)
         }
       },
       { threshold, rootMargin }
     );
 
-    observer.observe(ref.current);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
+    // Cleanup observer on unmount
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  const handleAnimationComplete = (index) => {
+  // Handle completion of all word animations
+  const handleAnimationComplete = () => {
     animatedCount.current += 1;
-    if (animatedCount.current === letters.length && onLetterAnimationComplete) {
-      onLetterAnimationComplete();
+    if (animatedCount.current === words.length && onWordAnimationComplete) {
+      onWordAnimationComplete();
     }
   };
 
@@ -57,31 +66,22 @@ const SplitText = ({
     >
       {words.map((word, wordIndex) => (
         <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
-          {word.map((letter, letterIndex) => {
-            const index = words
-              .slice(0, wordIndex)
-              .reduce((acc, w) => acc + w.length, 0) + letterIndex;
-
-            return (
-              <motion.span
-                key={index}
-                initial={animationFrom}
-                animate={inView ? animationTo : animationFrom}
-                transition={{
-                  delay: index * delay,
-                  duration: 0.3,
-                  ease: easing,
-                }}
-                onAnimationComplete={() => handleAnimationComplete(index)}
-                style={{
-                  display: 'inline-block',
-                  willChange: 'transform, opacity',
-                }}
-              >
-                {letter}
-              </motion.span>
-            );
-          })}
+          <motion.span
+            initial={animationFrom}
+            animate={inView ? animationTo : animationFrom}
+            transition={{
+              delay: wordIndex * delay, // Add delay for each word based on its index
+              duration: 0.3,
+              ease: easing,
+            }}
+            onAnimationComplete={handleAnimationComplete}
+            style={{
+              display: 'inline-block',
+              willChange: 'transform, opacity',
+            }}
+          >
+            {word}
+          </motion.span>
           <span style={{ display: 'inline-block', width: '0.3em' }}>&nbsp;</span>
         </span>
       ))}
