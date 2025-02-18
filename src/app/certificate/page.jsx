@@ -67,8 +67,8 @@ export default function CertificateGenerator() {
               />
               <div className="certificate-content">
 
-                <p>Name: {userData.name}</p>
-                <p>Event: {userData.event}</p>
+                <h2>{userData.name}</h2>
+                <p>{userData.event}</p>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Link href="/schedule">schedule</Link>
                 <Link href="/contact">contact</Link>
              </div>
-                <Link href="/register"  className="nav-btn-container">
+                <Link href="https://forms.gle/mgmGwYPf7TUtApxKA"  className="nav-btn-container">
                 <button className="nav-btn" >
                  Register
                 </button>

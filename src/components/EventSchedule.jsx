@@ -3,11 +3,11 @@ import * as motion from "motion/react-client";
 
 const Schedule = () => {
   const schedule = [
-    { title: "Spot Registration", time: "8:30 AM - 9:00 AM" },
-    { title: "Inauguration", time: "9:00 AM - 10:00 AM" },
-    { title: "Event Timing", time: "10:00 AM - 1:00 PM" },
-    { title: "Lunch Timing", time: "1:00 PM - 2:00 PM" },
-    { title: "Ceremony", time: "2:00 PM - 3:30 PM" },
+    { title: "Spot Registration", time: "8:30 AM - 9:15 AM" },
+    { title: "Inauguration", time: "9:15 AM - 10:30 AM" },
+    { title: "Event Timing", time: "10:30 AM - 1:30 PM" },
+    { title: "Lunch Timing", time: "1:30 PM - 2:30 PM" },
+    { title: "Ceremony", time: "2:30 PM - 3:30 PM" },
   ];
 
   return (

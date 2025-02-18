@@ -27,7 +27,7 @@ export const HamMenu = () => {
      <Link href="/events" onClick={toggleMenu}>Events</Link>
      <Link href="/schedule" onClick={toggleMenu} >Schedule</Link>
      <Link href="/contact" onClick={toggleMenu}>Contact</Link>
-     <Link href="/register" onClick={toggleMenu}><button>Register</button></Link>
+     <Link href="https://forms.gle/mgmGwYPf7TUtApxKA" onClick={toggleMenu}><button>Register</button></Link>
     </div>
     </motion.div>
     </>

@@ -22,7 +22,7 @@ const RegisterCounter = () => {
         <div className="eventIntroRegister">
           <Countdown targetDate="2025-02-23T08:59:59" />
         </div>
-        <Link href="/register" className="registerButton">Register Now</Link>
+        <Link href="https://forms.gle/mgmGwYPf7TUtApxKA" className="registerButton">Register Now</Link>
       </motion.div>
     </section>
   );
