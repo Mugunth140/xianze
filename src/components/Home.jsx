@@ -43,7 +43,7 @@ const Home = () => {
       <motion.div className="heroSubtitle" animate={{y: 0, opacity: 1}} initial={{y: 40, opacity: 0}} transition={{duration: 1}}>
     <p>Join the largest gathering of young tech enthusiasts and experience the thrill of competition, learning, as well as innovation, The place where ideas come alive and futures are shaped.</p>
     </motion.div>
-      <motion.span initial={{y: 40, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 1}}><Link href="/register" className="heroBtn">Register now</Link></motion.span>
+      <motion.span initial={{y: 40, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 1}}><Link href="https://forms.gle/mgmGwYPf7TUtApxKA" className="heroBtn">Register now</Link></motion.span>
       <motion.div className="heroScroller" animate={{y: 0, opacity: 1}} initial={{y: 30, opacity: 0}} transition={{duration: 1}}>
     <FaArrowDown />
     <p>scroll down</p>
