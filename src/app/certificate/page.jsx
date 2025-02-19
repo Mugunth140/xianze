@@ -32,7 +32,7 @@ export default function CertificateGenerator() {
 
     const certificate = document.getElementById("certificate");
     html2canvas(certificate, {
-      scale: 3, // Increase the scale to ensure high quality
+      scale: 3,
       useCORS: true,
     }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
