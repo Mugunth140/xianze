@@ -20,7 +20,7 @@ const RegisterCounter = () => {
           Secure your spot before it's too late. Register now and be part of Xianze!
         </motion.p>
         <div className="eventIntroRegister">
-          <Countdown targetDate="2025-02-23T08:59:59" />
+          <Countdown targetDate="2025-02-21T23:59:59" />
         </div>
         <Link href="https://forms.gle/mgmGwYPf7TUtApxKA" className="registerButton">Register Now</Link>
       </motion.div>
