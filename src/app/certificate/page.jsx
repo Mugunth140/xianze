@@ -36,7 +36,7 @@ export default function CertificateGenerator() {
       // Download with username-based naming
       const link = document.createElement("a");
       link.href = data.certificateUrl;
-      link.download = `xianze_${username}.pdf`;
+      link.download = `xianze_participation_certificate_${username}.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

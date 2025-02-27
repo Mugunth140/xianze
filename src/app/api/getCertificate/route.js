@@ -22,7 +22,7 @@ export async function GET(req) {
 
     // Find certificate with xianze_{username} naming
     const certificate = blobs.find((blob) => 
-      blob.pathname === `certificates/xianze_${username}`
+      blob.pathname === `certificates/xianze_participation_certificate_${username}.pdf`
     );
 
     if (!certificate) {
